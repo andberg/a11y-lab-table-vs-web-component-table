@@ -23,8 +23,8 @@
                 <th scope="col">HP</th>
             </tr>
             <tr>
-                <td>Bulbasaus</td>
-                <td>Gärs/Gift</td>
+                <td>Bulbasaur</td>
+                <td>Gräs/Gift</td>
                 <td>Nej</td>
                 <td>886</td>
             </tr>
@@ -42,7 +42,32 @@
             </tr>
         </table>
         <h2>Web component tabell</h2>
-        <wc-table role="table"></wc-table>
+        <wc-table role="table" style="display: table">
+            <wc-tr role="row" style="display: table-row">
+                <wc-th role="columnheader" style="display: table-cell">Namn</wc-th>
+                <wc-th role="columnheader" style="display: table-cell">Typ</wc-th>
+                <wc-th role="columnheader" style="display: table-cell">Lucky</wc-th>
+                <wc-th role="columnheader" style="display: table-cell">HP</wc-th>
+            </wc-tr>
+            <wc-tr role="row" style="display: table-row">
+                <wc-td role="cell" style="display: table-cell">Bulbasaur</wc-td>
+                <wc-td role="cell" style="display: table-cell">Gräs/Gift</wc-td>
+                <wc-td role="cell" style="display: table-cell">Nej</wc-td>
+                <wc-td role="cell" style="display: table-cell">886</wc-td>
+            </wc-tr>
+            <wc-tr role="row" style="display: table-row">
+                <wc-td role="cell" style="display: table-cell">Darkrai</wc-td>
+                <wc-td role="cell" style="display: table-cell">Mörk</wc-td>
+                <wc-td role="cell" style="display: table-cell">Ja</wc-td>
+                <wc-td role="cell" style="display: table-cell">2308</wc-td>
+            </wc-tr>
+            <wc-tr role="row" style="display: table-row">
+                <wc-td role="cell" style="display: table-cell">Metapod</wc-td>
+                <wc-td role="cell" style="display: table-cell">Insekt</wc-td>
+                <wc-td role="cell" style="display: table-cell">Nej</wc-td>
+                <wc-td role="cell" style="display: table-cell">131</wc-td>
+            </wc-tr>
+        </wc-table>
     </div>
 </body>
 <script src="./web-componets.js"></script>

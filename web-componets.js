@@ -1,14 +1,39 @@
 class WCTable extends HTMLElement {
   constructor() {
     super();
-
     const shadow = this.attachShadow({ mode: 'open' });
-
-    const table = document.createElement('table');
-
-    shadow.appendChild(table);
+    const slot = document.createElement('slot');
+    shadow.appendChild(slot);
   }
 }
-
-// Define the new element
 customElements.define('wc-table', WCTable);
+
+class WCRow extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+    const slot = document.createElement('slot');
+    shadow.appendChild(slot);
+  }
+}
+customElements.define('wc-tr', WCRow);
+
+class WCTableHeader extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+    const slot = document.createElement('slot');
+    shadow.appendChild(slot);
+  }
+}
+customElements.define('wc-th', WCRow);
+
+class WCTableDataCell extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: 'open' });
+    const slot = document.createElement('slot');
+    shadow.appendChild(slot);
+  }
+}
+customElements.define('wc-td', WCTableDataCell);
