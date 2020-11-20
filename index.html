@@ -1,0 +1,50 @@
+<!DOCTYPE html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>A11y labb med tabeller</title>
+    <meta name="description"
+        content="Laboration med tillgänglighet och tabeller. Hur läser skärmläsare tabeller som är gjorda av Web Components i jämförelse med vanliga tabeller. ">
+    <link rel="stylesheet" href="./main.css" />
+</head>
+
+<body>
+    <div id="main-container">
+        <h1>Labb med uppläsning av tabeller</h1>
+        <table>
+            <caption>Mina Pokémons</caption>
+            <tr>
+                <th scope="col">Namn</th>
+                <th scope="col">Typ</th>
+                <th scope="col">Lucky</th>
+                <th scope="col">HP</th>
+            </tr>
+            <tr>
+                <td>Bulbasaus</td>
+                <td>Gärs/Gift</td>
+                <td>Nej</td>
+                <td>886</td>
+            </tr>
+            <tr>
+                <td>Darkrai</td>
+                <td>Mörk</td>
+                <td>Ja</td>
+                <td>2308</td>
+            </tr>
+            <tr>
+                <td>Metapod</td>
+                <td>Insekt</td>
+                <td>Nej</td>
+                <td>131</td>
+            </tr>
+        </table>
+        <h2>Web component tabell</h2>
+        <wc-table role="table"></wc-table>
+    </div>
+</body>
+<script src="./web-componets.js"></script>
+
+</html>
