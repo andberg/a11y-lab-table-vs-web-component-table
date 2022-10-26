@@ -62,3 +62,29 @@ class WCTableDataCell extends HTMLElement {
   }
 }
 customElements.define("wc-td", WCTableDataCell);
+
+class WCWithTwoRows extends HTMLElement {
+  constructor() {
+    super();
+    this.style.display = "contents";
+    const shadow = this.attachShadow({ mode: "open" });
+
+    const trForSlot = document.createElement("wc-tr");
+    trForSlot.setAttribute("role", "row");
+    trForSlot.style.display = "table-row";
+    const slot = document.createElement("slot");
+    trForSlot.appendChild(slot);
+
+    const tr = document.createElement("wc-tr");
+    tr.setAttribute("role", "row");
+    tr.style.display = "table-row";
+    const td = document.createElement("wc-td");
+    td.innerHTML = "Inner html i td";
+    td.setAttribute("colspan", "4");
+    tr.appendChild(td);
+
+    shadow.appendChild(trForSlot);
+    shadow.appendChild(tr);
+  }
+}
+customElements.define("wc-two-rows", WCWithTwoRows);
