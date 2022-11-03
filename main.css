@@ -1,0 +1,95 @@
+/*
+colors
+#228C8A
+#2834F5;
+*/
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+}
+
+h1 {
+    margin: 0.25rem 0 1.5rem 0;
+}
+
+h2 {
+    margin: 0.5rem 0 1.5rem 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    max-width: 64ch;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: underline;
+    color: #2834F5;
+    padding: 0.2rem;
+}
+
+a:hover {
+    background-color: rgba(40, 52, 245, 0.1)
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+li {
+
+    margin: 0.5rem 0;
+}
+
+li::before {
+    content: '⇨';
+    color: #2834F5;
+    padding-right: 0.5rem;
+    font-size: 1.125rem;
+    position: relative;
+    top: 2px;
+}
+
+.main-container {
+    margin: 0 auto;
+    max-width: 1024px;
+    padding: 3rem 0.5rem;
+}
+
+/* Table CSS
+................. */
+table,
+wc-table {
+    border-collapse: collapse;
+    margin-bottom: 3rem;
+}
+
+th,
+td,
+wc-th,
+wc-td {
+    border: 1px solid #228C8A;
+    padding: 0.35rem;
+    column-gap: 0.25rem;
+}
+
+th,
+wc-th {
+    background-color: rgba(34, 140, 138, 0.25);
+}

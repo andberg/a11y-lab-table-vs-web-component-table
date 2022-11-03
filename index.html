@@ -1,188 +1,27 @@
-<!DOCTYPE html lang="sv">
+<!DOCTYPE html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>A11y labb med tabeller</title>
+    <title>Accessibility and Web Components</title>
     <meta name="description"
-        content="Laboration med tillgänglighet och tabeller. Hur läser skärmläsare tabeller som är gjorda av Web Components i jämförelse med vanliga tabeller. ">
+        content="Laboration with accessibility and Web Components. Project built for testing with screen readers.">
     <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-    <div id="main-container">
-        <h1>Labb med uppläsning av tabeller</h1>
-        <table>
-            <caption>Mina Pokémons</caption>
-            <tr>
-                <th scope="col">Namn</th>
-                <th scope="col">Typ</th>
-                <th scope="col">Lucky</th>
-                <th scope="col">HP</th>
-            </tr>
-            <tr>
-                <td>Bulbasaur</td>
-                <td>Gräs/Gift</td>
-                <td>Nej</td>
-                <td>886</td>
-            </tr>
-            <tr>
-                <td>Darkrai</td>
-                <td>Mörk</td>
-                <td>Ja</td>
-                <td>2308</td>
-            </tr>
-            <tr>
-                <td>Metapod</td>
-                <td>Insekt</td>
-                <td>Nej</td>
-                <td>131</td>
-            </tr>
-        </table>
-        <br />
-        <h2>Web component tabell</h2>
-        <wc-table>
-            <wc-tr>
-                <wc-th>Namn</wc-th>
-                <wc-th>Typ</wc-th>
-                <wc-th>Lucky</wc-th>
-                <wc-th>HP</wc-th>
-            </wc-tr>
-            <wc-body>
-                <wc-tr>
-                    <wc-td>Bulbasaur</wc-td>
-                    <wc-td>Gräs/Gift</wc-td>
-                    <wc-td>Nej</wc-td>
-                    <wc-td>886</wc-td>
-                </wc-tr>
-                <wc-tr>
-                    <wc-td>Darkrai</wc-td>
-                    <wc-td>Mörk</wc-td>
-                    <wc-td>Ja</wc-td>
-                    <wc-td>2308</wc-td>
-                </wc-tr>
-                <wc-tr>
-                    <wc-td>Metapod</wc-td>
-                    <wc-td>Insekt</wc-td>
-                    <wc-td>Nej</wc-td>
-                    <wc-td>131</wc-td>
-                </wc-tr>
-            </wc-body>
-        </wc-table>
-        <br />
-        <br />
-        <h2>Web component tabell med div (med display contents) mellan tr och cell</h2>
+    <div class="main-container">
+        <h1>Notes on Web Components and Accessibility</h1>
+        <ul>
+            <li><a href="./pages/why-web-components.html">Why Web Components</a></li>
+            <li><a href="./pages/table.html">Table - example</a></li>
+        </ul>
 
-        <wc-table>
-            <wc-tr>
-                <wc-th>Namn</wc-th>
-                <wc-th>Typ</wc-th>
-                <wc-th>Lucky</wc-th>
-                <wc-th>HP</wc-th>
-            </wc-tr>
-            <wc-body>
-                <wc-tr>
-                    <div style="display: contents;">
-                        <wc-td>Bulbasaur</wc-td>
-                        <wc-td>Gräs/Gift</wc-td>
-                        <wc-td>Nej</wc-td>
-                        <wc-td>886</wc-td>
-                    </div>
-                </wc-tr>
-                <wc-tr>
-                    <div style="display: contents;">
-                        <wc-td>Darkrai</wc-td>
-                        <wc-td>Mörk</wc-td>
-                        <wc-td>Ja</wc-td>
-                        <wc-td>2308</wc-td>
-                    </div>
-                </wc-tr>
-                <wc-tr>
-                    <div style="display: contents;">
-                        <wc-td>Metapod</wc-td>
-                        <wc-td>Insekt</wc-td>
-                        <wc-td>Nej</wc-td>
-                        <wc-td>131</wc-td>
-                    </div>
-                </wc-tr>
-                <wc-tr>
-                    <div style="display: contents;">
-                        <wc-td>Metapod</wc-td>
-                        <wc-td>Insekt</wc-td>
-                        <wc-td>Nej</wc-td>
-                        <wc-td>131</wc-td>
-                    </div>
-                </wc-tr>
-            </wc-body>
-        </wc-table>
-        <br />
-        <br />
-        <h2>Web component tabell med div (utan display contents) mellan tr och cell</h2>
-        <wc-table>
-            <wc-tr>
-                <wc-th>Namn</wc-th>
-                <wc-th>Typ</wc-th>
-                <wc-th>Lucky</wc-th>
-                <wc-th>HP</wc-th>
-            </wc-tr>
-            <wc-body>
-                <wc-tr>
-                    <div>
-                        <wc-td>Bulbasaur</wc-td>
-                        <wc-td>Gräs/Gift</wc-td>
-                        <wc-td>Nej</wc-td>
-                        <wc-td>886</wc-td>
-                    </div>
-                </wc-tr>
-                <wc-tr>
-                    <div>
-                        <wc-td>Darkrai</wc-td>
-                        <wc-td>Mörk</wc-td>
-                        <wc-td>Ja</wc-td>
-                        <wc-td>2308</wc-td>
-                    </div>
-                </wc-tr>
-                <wc-tr>
-                    <div>
-                        <wc-td>Metapod</wc-td>
-                        <wc-td>Insekt</wc-td>
-                        <wc-td>Nej</wc-td>
-                        <wc-td>131</wc-td>
-                    </div>
-                </wc-tr>
-            </wc-body>
-        </wc-table>
-
-        <h2>Web component tabell med konfiguration: </h2>
-        <p>Custom element som wrappar två table rows där den ena raden har en cell i sig med colspan och fler celler i
-            sig med role presentation (kanske)
-        </p>
-        <wc-table>
-            <wc-tr>
-                <wc-th>Namn</wc-th>
-                <wc-th>Typ</wc-th>
-                <wc-th>Lucky</wc-th>
-                <wc-th>HP</wc-th>
-            </wc-tr>
-            <wc-body>
-                <wc-two-rows>
-                    <wc-td>Darkrai</wc-td>
-                    <wc-td>Mörk</wc-td>
-                    <wc-td>Ja</wc-td>
-                    <wc-td>2308</wc-td>
-                </wc-two-rows>
-                <wc-two-rows>
-                    <wc-td>Metapod</wc-td>
-                    <wc-td>Insekt</wc-td>
-                    <wc-td>Nej</wc-td>
-                    <wc-td>131</wc-td>
-                </wc-two-rows>
-            </wc-body>
-        </wc-table>
     </div>
 </body>
+
 <script src="./web-componets.js"></script>
 
 </html>
