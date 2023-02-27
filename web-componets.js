@@ -88,3 +88,32 @@ class WCWithTwoRows extends HTMLElement {
   }
 }
 customElements.define("wc-two-rows", WCWithTwoRows);
+
+class TableWrapper extends HTMLElement {
+  constructor() {
+    super();
+    const buttonWrapper = document.createElement("div");
+    const button = document.createElement("button");
+    button.innerText = "Knapp";
+    buttonWrapper.appendChild(button);
+
+    this.appendChild(buttonWrapper);
+  }
+}
+customElements.define("table-wrapper", TableWrapper);
+
+class TableWrapperShadow extends HTMLElement {
+  constructor() {
+    super();
+    const shadow = this.attachShadow({ mode: "open" });
+    const slot = document.createElement("slot");
+    const buttonWrapper = document.createElement("div");
+    const button = document.createElement("button");
+    button.innerText = "Knapp";
+    buttonWrapper.appendChild(button);
+
+    shadow.appendChild(buttonWrapper);
+    shadow.appendChild(slot);
+  }
+}
+customElements.define("table-wrapper-sh", TableWrapperShadow);
